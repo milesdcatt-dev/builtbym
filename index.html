@@ -1454,6 +1454,207 @@ PRE-LAUNCH TODO:
   .gen-feat{font-size:0.74rem;color:rgba(0,0,0,0.55);display:flex;flex-direction:column;gap:2px}
   .gen-feat strong{color:rgba(0,0,0,0.85);font-weight:500;font-size:0.84rem}
 
+  /* =================== LIVE PREVIEW — PER-INDUSTRY LAYOUT VARIANTS =================== */
+  /* Each layout reshapes the same DOM into a meaningfully different design so the
+     generator demonstrates range, not just color/text swapping. */
+
+  /* Shared: art uses brand color as a CSS var, each layout paints its own pattern */
+  .gen-art{background:linear-gradient(135deg, var(--brand-primary, var(--blue)), rgba(0,0,0,0.15))}
+
+  /* Industry icon glyph — sits in the art block, white outline */
+  .gen-art::before{
+    content:"";position:absolute;right:14px;top:14px;width:34%;aspect-ratio:1;
+    background-position:center;background-repeat:no-repeat;background-size:contain;
+    opacity:0.85;pointer-events:none;
+    filter:drop-shadow(0 2px 8px rgba(0,0,0,0.25));
+    transition:opacity .35s ease;
+  }
+  .gen-browser[data-layout="auto"] .gen-art::before{
+    background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M44 8a12 12 0 0 0-11 17L8 50a4 4 0 0 0 6 6l25-25a12 12 0 0 0 17-11l-7 7-6-1-1-6 7-7'/%3E%3C/svg%3E");
+  }
+  .gen-browser[data-layout="salon"] .gen-art::before{
+    background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='14' cy='46' r='6'/%3E%3Ccircle cx='14' cy='18' r='6'/%3E%3Cpath d='M19 22l36 26M19 42l36-26'/%3E%3C/svg%3E");
+    right:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:46%;opacity:0.7;
+  }
+  .gen-browser[data-layout="dental"] .gen-art::before{
+    background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 8c-6 0-10 4-10 12 0 6 2 8 4 14 1 4 1 10 3 16 1 4 5 4 6 0l3-12c1-4 6-4 7 0l3 12c1 4 5 4 6 0 2-6 2-12 3-16 2-6 4-8 4-14 0-8-4-12-10-12-4 0-5 3-9 3s-5-3-10-3z'/%3E%3C/svg%3E");
+    right:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:56%;opacity:0.55;
+  }
+  .gen-browser[data-layout="food"] .gen-art::before{
+    background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='34' r='18'/%3E%3Ccircle cx='32' cy='34' r='12'/%3E%3Cpath d='M12 8v14a4 4 0 0 0 4 4v30M52 8v18a3 3 0 0 1-3 3h-2v25'/%3E%3C/svg%3E");
+    width:38%;
+  }
+  .gen-browser[data-layout="trades"] .gen-art::before{
+    background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 22l16-10 22 14-6 8-22-14M30 26L8 50a4 4 0 0 0 6 6l22-22'/%3E%3C/svg%3E");
+  }
+  .gen-browser[data-layout="fitness"] .gen-art::before{
+    background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='22' width='8' height='20' rx='2'/%3E%3Crect x='52' y='22' width='8' height='20' rx='2'/%3E%3Crect x='12' y='28' width='4' height='8'/%3E%3Crect x='48' y='28' width='4' height='8'/%3E%3Cpath d='M16 32h32'/%3E%3C/svg%3E");
+    right:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:46%;opacity:0.65;
+  }
+
+  /* ---- AUTO: industrial, text-left + dark photo right, cross-hatch ---- */
+  .gen-browser[data-layout="auto"] .gen-art{
+    background:
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.07) 0 1px, transparent 1px 9px),
+      linear-gradient(135deg, var(--brand-primary, var(--blue)) 0%, rgba(0,0,0,0.55) 100%);
+  }
+
+  /* ---- SALON: editorial — full-width photo banner on top, centered text below ---- */
+  .gen-browser[data-layout="salon"]{background:#fdf8f3}
+  .gen-browser[data-layout="salon"] .gen-hero-row{grid-template-columns:1fr;gap:16px}
+  .gen-browser[data-layout="salon"] .gen-art{
+    aspect-ratio:auto;height:120px;order:-1;border-radius:8px;
+    background:
+      radial-gradient(circle at 25% 30%, rgba(255,255,255,0.22) 0 1.5px, transparent 2px) 0 0/14px 14px,
+      linear-gradient(150deg, var(--brand-primary, var(--blue)), rgba(255,245,230,0.4));
+  }
+  .gen-browser[data-layout="salon"] .gen-headline{text-align:center;font-size:2rem}
+  .gen-browser[data-layout="salon"] .gen-sub{text-align:center;max-width:42ch;margin-left:auto;margin-right:auto}
+  .gen-browser[data-layout="salon"] .gen-buttons{justify-content:center}
+  .gen-browser[data-layout="salon"] .gen-feats{
+    display:flex;justify-content:center;flex-wrap:wrap;gap:4px 14px;
+    grid-template-columns:none;border-top:none;padding-top:8px;
+  }
+  .gen-browser[data-layout="salon"] .gen-feat{flex-direction:row;align-items:baseline;gap:5px;font-size:0.74rem;position:relative}
+  .gen-browser[data-layout="salon"] .gen-feat strong{font-size:0.74rem;font-weight:600}
+  .gen-browser[data-layout="salon"] .gen-feat:not(:last-child)::after{
+    content:"·";color:rgba(0,0,0,0.3);position:absolute;right:-10px;top:0;
+  }
+
+  /* ---- DENTAL: clinical — centered, airy mint, small round photo ---- */
+  .gen-browser[data-layout="dental"]{background:#f3f8f6}
+  .gen-browser[data-layout="dental"] .gen-hero-row{grid-template-columns:1fr;text-align:center}
+  .gen-browser[data-layout="dental"] .gen-art{
+    aspect-ratio:auto;width:92px;height:92px;border-radius:50%;margin:6px auto 0;order:1;padding:0;
+    background:
+      radial-gradient(circle at 40% 35%, color-mix(in srgb, var(--brand-primary, var(--blue)) 35%, white), color-mix(in srgb, var(--brand-primary, var(--blue)) 75%, white));
+  }
+  .gen-browser[data-layout="dental"] .gen-art .gtag{display:none}
+  .gen-browser[data-layout="dental"] .gen-headline{font-size:1.8rem}
+  .gen-browser[data-layout="dental"] .gen-buttons{justify-content:center}
+  .gen-browser[data-layout="dental"] .gen-feats{border-top:none;padding-top:14px;gap:8px}
+  .gen-browser[data-layout="dental"] .gen-feat{
+    align-items:center;text-align:center;padding:10px 6px;border-radius:8px;
+    background:rgba(255,255,255,0.7);border:1px solid rgba(0,0,0,0.05);
+  }
+
+  /* ---- FOOD: dark moody — reversed grid, dark menu rows with prices ---- */
+  .gen-browser[data-layout="food"]{background:#1a1614;color:#f5ede0}
+  .gen-browser[data-layout="food"] .gen-browser-chrome{background:rgba(255,255,255,0.04);border-bottom-color:rgba(255,255,255,0.08)}
+  .gen-browser[data-layout="food"] .gen-browser-chrome .gurl{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)}
+  .gen-browser[data-layout="food"] .gen-bn .glinks{color:rgba(255,255,255,0.55)}
+  .gen-browser[data-layout="food"] .gen-headline em{color:color-mix(in srgb, var(--brand-primary, var(--blue)) 80%, #fef3c7)}
+  .gen-browser[data-layout="food"] .gen-sub{color:rgba(245,237,224,0.55)}
+  .gen-browser[data-layout="food"] .gen-buttons .gb2{color:rgba(245,237,224,0.7)}
+  .gen-browser[data-layout="food"] .gen-hero-row{grid-template-columns:1fr 1.3fr}
+  .gen-browser[data-layout="food"] .gen-art{
+    order:-1;aspect-ratio:0.9;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08), transparent 50%),
+      radial-gradient(circle at 70% 75%, rgba(255,255,255,0.06), transparent 50%),
+      linear-gradient(135deg, color-mix(in srgb, var(--brand-primary, var(--blue)) 70%, black), #0a0807);
+  }
+  .gen-browser[data-layout="food"] .gen-feats{
+    grid-template-columns:1fr;gap:0;border-top:1px solid rgba(255,255,255,0.1);padding-top:14px;
+  }
+  .gen-browser[data-layout="food"] .gen-feat{
+    flex-direction:row;justify-content:space-between;align-items:baseline;
+    padding:7px 0;border-bottom:1px dashed rgba(255,255,255,0.08);color:rgba(245,237,224,0.6);
+    font-family:'Fraunces',serif;font-style:italic;font-size:0.85rem;
+  }
+  .gen-browser[data-layout="food"] .gen-feat:last-child{border-bottom:none}
+  .gen-browser[data-layout="food"] .gen-feat strong{
+    color:#f5ede0;font-family:'Fraunces',serif;font-style:normal;font-weight:500;font-size:0.92rem;
+  }
+
+  /* ---- TRADES: phone-first — bigger headline, bold cert badges with stripe top ---- */
+  .gen-browser[data-layout="trades"]{background:#f8f7f3}
+  .gen-browser[data-layout="trades"] .gen-headline{font-size:2.1rem;font-weight:500}
+  .gen-browser[data-layout="trades"] .gen-buttons .gb1{padding:11px 18px;font-size:0.85rem;font-weight:600;letter-spacing:0.01em}
+  .gen-browser[data-layout="trades"] .gen-buttons .gb2{font-weight:600}
+  .gen-browser[data-layout="trades"] .gen-art{
+    background:
+      repeating-linear-gradient(45deg, var(--brand-primary, var(--blue)) 0 14px, color-mix(in srgb, var(--brand-primary, var(--blue)) 70%, black) 14px 18px, var(--brand-primary, var(--blue)) 18px 32px, rgba(0,0,0,0.15) 32px 36px);
+  }
+  .gen-browser[data-layout="trades"] .gen-feats{gap:8px}
+  .gen-browser[data-layout="trades"] .gen-feat{
+    background:white;border:1.5px solid var(--brand-primary, var(--blue));border-radius:6px;
+    padding:11px 8px 9px;align-items:center;text-align:center;position:relative;overflow:hidden;
+  }
+  .gen-browser[data-layout="trades"] .gen-feat::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:repeating-linear-gradient(45deg, var(--brand-primary, var(--blue)) 0 5px, transparent 5px 10px);opacity:0.7;
+  }
+  .gen-browser[data-layout="trades"] .gen-feat strong{font-weight:600;font-size:0.82rem;letter-spacing:0.01em;text-transform:uppercase}
+  .gen-browser[data-layout="trades"] .gen-feat span{font-size:0.7rem}
+
+  /* ---- FITNESS: schedule grid — features become class cards with day + time ---- */
+  .gen-browser[data-layout="fitness"]{background:#f5f4f0}
+  .gen-browser[data-layout="fitness"] .gen-art{
+    background:
+      radial-gradient(circle at 50% 50%, transparent 18%, rgba(255,255,255,0.12) 19%, transparent 21%),
+      radial-gradient(circle at 50% 50%, transparent 30%, rgba(255,255,255,0.1) 31%, transparent 33%),
+      radial-gradient(circle at 50% 50%, transparent 42%, rgba(255,255,255,0.08) 43%, transparent 45%),
+      linear-gradient(135deg, var(--brand-primary, var(--blue)), color-mix(in srgb, var(--brand-primary, var(--blue)) 55%, #2d3748));
+  }
+  .gen-browser[data-layout="fitness"] .gen-feats{gap:6px;border-top-style:dashed}
+  .gen-browser[data-layout="fitness"] .gen-feat{
+    background:white;border:1px solid rgba(0,0,0,0.06);border-radius:6px;padding:9px 6px;
+    align-items:center;text-align:center;gap:3px;
+  }
+  .gen-browser[data-layout="fitness"] .gen-feat strong{
+    color:var(--brand-primary, var(--blue));font-size:0.78rem;font-weight:600;letter-spacing:-0.005em;
+  }
+  .gen-browser[data-layout="fitness"] .gen-feat span{
+    font-family:'IBM Plex Mono',monospace;font-size:0.66rem;letter-spacing:0.04em;
+  }
+
+  /* =================== DESKTOP/MOBILE VIEWPORT TOGGLE =================== */
+  .view-toggle{
+    display:inline-flex;align-items:center;gap:2px;position:relative;
+    background:rgba(10,37,64,0.06);border:1px solid rgba(10,37,64,0.08);
+    border-radius:999px;padding:3px;margin:0 auto 14px;align-self:center;
+  }
+  .gen-stage{display:flex;flex-direction:column}
+  .vt-btn{
+    position:relative;z-index:2;background:transparent;border:0;cursor:pointer;
+    padding:7px 14px;border-radius:999px;
+    display:inline-flex;align-items:center;gap:6px;
+    font:500 0.75rem/1 'Manrope',sans-serif;color:rgba(10,37,64,0.55);letter-spacing:0.01em;
+    transition:color .25s ease;
+  }
+  .vt-btn.is-on{color:var(--navy)}
+  .vt-btn:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+  .vt-pill{
+    position:absolute;top:3px;bottom:3px;left:3px;width:0;
+    background:white;border-radius:999px;z-index:1;
+    box-shadow:0 1px 3px rgba(10,37,64,0.12),0 1px 1px rgba(10,37,64,0.04);
+    transition:left .3s cubic-bezier(.4,0,.2,1), width .3s cubic-bezier(.4,0,.2,1);
+  }
+  /* Mobile viewport — frame the browser as a phone */
+  .gen-browser[data-view="mobile"]{
+    max-width:300px;margin:0 auto;border-radius:28px;
+    box-shadow:0 0 0 8px #1a1d22, 0 0 0 9px #2a2e36, 0 30px 60px -20px rgba(10,37,64,0.35);
+    min-height:560px;
+    transition:max-width .4s cubic-bezier(.4,0,.2,1), border-radius .4s, box-shadow .4s;
+  }
+  .gen-browser[data-view="mobile"] .gen-browser-chrome{padding:7px 12px}
+  .gen-browser[data-view="mobile"] .gen-browser-chrome .gd{display:none}
+  .gen-browser[data-view="mobile"] .gen-browser-chrome .gurl{font-size:0.62rem;padding:4px 8px}
+  .gen-browser[data-view="mobile"] .gen-browser-body{padding:16px 16px}
+  .gen-browser[data-view="mobile"] .gen-bn{font-size:0.72rem}
+  .gen-browser[data-view="mobile"] .gen-bn .glinks{display:none}
+  .gen-browser[data-view="mobile"] .gen-bn .gbrand{font-size:0.95rem}
+  .gen-browser[data-view="mobile"] .gen-bn .gcta{padding:5px 10px;font-size:0.66rem}
+  .gen-browser[data-view="mobile"] .gen-hero-row{grid-template-columns:1fr;gap:12px}
+  .gen-browser[data-view="mobile"] .gen-headline{font-size:1.45rem}
+  .gen-browser[data-view="mobile"] .gen-sub{font-size:0.78rem}
+  .gen-browser[data-view="mobile"] .gen-art{aspect-ratio:16/10;order:-1}
+  .gen-browser[data-view="mobile"] .gen-feats{grid-template-columns:1fr;gap:6px}
+  .gen-browser[data-view="mobile"] .gen-feat{flex-direction:row;justify-content:space-between;align-items:baseline}
+  .gen-browser[data-view="mobile"][data-layout="dental"] .gen-art{aspect-ratio:auto;width:76px;height:76px;order:1}
+  .gen-browser[data-view="mobile"][data-layout="food"] .gen-feat{flex-direction:row;justify-content:space-between}
+
   /* =================== EDITORIAL SECTION DIVIDER =================== */
   .divider{
     display:flex;align-items:center;justify-content:center;gap:18px;
@@ -2045,7 +2246,18 @@ PRE-LAUNCH TODO:
 
       <!-- Live preview stage -->
       <div class="gen-stage r-up">
-        <div class="gen-browser" id="genBrowser">
+        <div class="view-toggle" id="viewToggle" role="tablist" aria-label="Preview viewport">
+          <button type="button" class="vt-btn is-on" data-view="desktop" role="tab" aria-selected="true">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            Desktop
+          </button>
+          <button type="button" class="vt-btn" data-view="mobile" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            Mobile
+          </button>
+          <span class="vt-pill" id="vtPill" aria-hidden="true"></span>
+        </div>
+        <div class="gen-browser" id="genBrowser" data-layout="auto" data-view="desktop">
           <div class="gen-browser-chrome">
             <div class="gd"><span></span><span></span><span></span></div>
             <div class="gurl" id="genUrl">mikesauto.com</div>
@@ -3284,6 +3496,7 @@ PRE-LAUNCH TODO:
   (function(){
     const industries = {
       auto: {
+        layout: 'auto',
         url: (n) => slug(n) + '.com',
         emojiTag: 'Open · Mon–Sat',
         headline: ['Honest work.', 'Done right.'],
@@ -3292,9 +3505,9 @@ PRE-LAUNCH TODO:
         links: ['Services', 'About', 'Visit'],
         cta: 'Book now',
         feats: [['ASE certified','12 years running'],['Same-day','Most repairs'],['Warranty','On every job']],
-        art: (c) => `linear-gradient(135deg, ${c}, ${shade(c, 25)})`,
       },
       salon: {
+        layout: 'salon',
         url: (n) => slug(n) + '-studio.com',
         emojiTag: 'By appointment',
         headline: ['Color, cuts,', 'quiet afternoons.'],
@@ -3302,10 +3515,10 @@ PRE-LAUNCH TODO:
         btn1: 'Book a chair', btn2: 'See gallery →',
         links: ['Services', 'Stylists', 'Gallery'],
         cta: 'Book online',
-        feats: [['Same stylist','Every visit'],['No upselling','Promise'],['Aveda colors','Only the good stuff']],
-        art: (c) => `linear-gradient(135deg, ${c}, ${shade(c, 35)})`,
+        feats: [['Lived-in color','Specialty'],['Aveda only','Promise'],['Same stylist','Every visit']],
       },
       dental: {
+        layout: 'dental',
         url: (n) => slug(n) + '-dental.com',
         emojiTag: 'Now accepting',
         headline: ['Care that', 'feels like home.'],
@@ -3313,10 +3526,10 @@ PRE-LAUNCH TODO:
         btn1: 'New patient', btn2: 'Our team →',
         links: ['Services', 'New patients', 'Contact'],
         cta: 'Book visit',
-        feats: [['Same-day','Crowns & onlays'],['Easy financing','0% for 12mo'],['Sedation','For nervous folks']],
-        art: (c) => `linear-gradient(135deg, ${c}, ${shade(c, 30)})`,
+        feats: [['Same-day crowns','In one visit'],['0% financing','Up to 12 months'],['Sedation','For nervous folks']],
       },
       food: {
+        layout: 'food',
         url: (n) => slug(n) + '.co',
         emojiTag: 'Tonight · 5–10pm',
         headline: ['Small menu.', 'Big flavors.'],
@@ -3324,10 +3537,10 @@ PRE-LAUNCH TODO:
         btn1: 'Reserve a table', btn2: 'See menu →',
         links: ['Menu', 'Reservations', 'Visit'],
         cta: 'Reserve',
-        feats: [['Tasting menu','Wed nights'],['Private dining','Up to 24'],['Wine list','60+ bottles']],
-        art: (c) => `linear-gradient(135deg, ${c}, ${shade(c, 28)})`,
+        feats: [['Tasting menu','$72'],['Wine pairing','+$48'],['Private dining','Parties 8+']],
       },
       trades: {
+        layout: 'trades',
         url: (n) => slug(n) + '-services.com',
         emojiTag: '24/7 emergencies',
         headline: ['On time.', 'Or it\'s free.'],
@@ -3335,10 +3548,10 @@ PRE-LAUNCH TODO:
         btn1: 'Get a quote', btn2: 'Call now →',
         links: ['Services', 'Service area', 'Reviews'],
         cta: 'Free quote',
-        feats: [['Licensed','& fully insured'],['Same-day','Most calls'],['Up-front','Pricing only']],
-        art: (c) => `linear-gradient(135deg, ${c}, ${shade(c, 22)})`,
+        feats: [['Licensed','#NJ-1234'],['Insured','$2M coverage'],['24/7','Emergency line']],
       },
       fitness: {
+        layout: 'fitness',
         url: (n) => slug(n) + '-studio.com',
         emojiTag: 'Drop-ins welcome',
         headline: ['Move better.', 'Feel better.'],
@@ -3346,8 +3559,7 @@ PRE-LAUNCH TODO:
         btn1: 'First class free', btn2: 'See schedule →',
         links: ['Schedule', 'Instructors', 'Pricing'],
         cta: 'Join',
-        feats: [['Small classes','8 max'],['Drop-in','$22 / class'],['First one','On us']],
-        art: (c) => `linear-gradient(135deg, ${c}, ${shade(c, 32)})`,
+        feats: [['Mon · Vinyasa','6a · 7p'],['Wed · HIIT','6a · 6p'],['Fri · Stretch','7a · 5p']],
       },
     };
 
@@ -3432,11 +3644,12 @@ PRE-LAUNCH TODO:
         row[1].textContent = cfg.feats[i][1];
       });
 
-      // apply color throughout
+      // apply color + layout throughout — CSS variants handle art patterns + per-industry visual style
       const c = state.color;
       const browser = document.getElementById('genBrowser');
       browser.style.setProperty('--brand-primary', c);
-      els.art.style.background = cfg.art(c);
+      browser.setAttribute('data-layout', cfg.layout);
+      els.art.style.background = '';
     }
 
     function escape(s){
@@ -3479,6 +3692,46 @@ PRE-LAUNCH TODO:
           }
         } catch(e){ /* user cancelled */ }
       });
+    }
+
+    // =================== "Like it?" CTA → pre-fill the contact form ===================
+    const genCta = document.querySelector('.gen-cta');
+    if (genCta){
+      genCta.addEventListener('click', () => {
+        const bizField = document.querySelector('#leadForm input[name="business"]');
+        if (bizField && state.name && state.name !== 'Your Business'){
+          bizField.value = state.name;
+        }
+        const newSiteChip = document.querySelector('#leadForm input[name="need"][value="Brand new site"]');
+        if (newSiteChip && !newSiteChip.checked) newSiteChip.checked = true;
+      });
+    }
+
+    // =================== VIEWPORT TOGGLE (desktop/mobile) ===================
+    const viewToggle = document.getElementById('viewToggle');
+    const vtPill = document.getElementById('vtPill');
+    if (viewToggle && vtPill){
+      function positionPill(){
+        const active = viewToggle.querySelector('.vt-btn.is-on');
+        if (!active) return;
+        vtPill.style.left = active.offsetLeft + 'px';
+        vtPill.style.width = active.offsetWidth + 'px';
+      }
+      viewToggle.querySelectorAll('.vt-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          viewToggle.querySelectorAll('.vt-btn').forEach(b => {
+            b.classList.remove('is-on');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('is-on');
+          btn.setAttribute('aria-selected', 'true');
+          const browser = document.getElementById('genBrowser');
+          if (browser) browser.setAttribute('data-view', btn.dataset.view);
+          positionPill();
+        });
+      });
+      requestAnimationFrame(positionPill);
+      window.addEventListener('resize', positionPill);
     }
 
     restoreFromHash();
