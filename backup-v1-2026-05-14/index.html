@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <!--
-PRE-LAUNCH TODO:
-- Buy and point builtbym.co domain
-- Replace placeholder phone (202) 999-7885 with real Google Voice/OpenPhone number
-- Confirm hello@builtbym.co inbox is monitored
-- Add at least one real portfolio piece to replace fake mockups
-- Verify real stats for "X sites shipped" line in founders section
--->
-<!--
   ===========================================================================
   BuiltByM — single-file landing page
   ===========================================================================
@@ -31,7 +23,7 @@ PRE-LAUNCH TODO:
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>BuiltByM — Modern websites for local businesses</title>
-<meta name="description" content="From $49/mo plus a one-time build fee. We build, host, and run modern websites for local service businesses. Three founders who answer the phone." />
+<meta name="description" content="We build, host, and run modern websites for local service businesses. From $299, plus a flat monthly. Built by three 19-year-old founders who answer the phone." />
 
 <!-- favicon (gradient B mark, inlined as SVG) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%231A6CFF'/><stop offset='1' stop-color='%236B9FFF'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='%230A2540'/><text x='50' y='72' font-family='Georgia, serif' font-size='68' font-style='italic' font-weight='500' fill='url(%23g)' text-anchor='middle'>M</text></svg>" />
@@ -40,14 +32,14 @@ PRE-LAUNCH TODO:
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="BuiltByM — Modern websites for local businesses" />
-<meta property="og:description" content="From $49/mo plus a one-time build fee. We build, host, and run your site for less than agencies charge for a single meeting. Three founders who answer the phone." />
+<meta property="og:description" content="From $299, plus a flat monthly. We build, host, and run your site for less than agencies charge for a single meeting. Built by three founders who answer the phone." />
 <meta property="og:site_name" content="BuiltByM" />
 <meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="BuiltByM — Modern websites for local businesses" />
-<meta name="twitter:description" content="From $49/mo plus a one-time build fee. Three founders who answer the phone." />
+<meta name="twitter:description" content="From $299, plus a flat monthly. Built by three founders who answer the phone." />
 
 <!-- OG share image — once you have a hosting URL, host og.png (1200x630) and uncomment.
      Most social scrapers (FB, iMessage, Slack) won't render data: URIs.
@@ -528,8 +520,6 @@ PRE-LAUNCH TODO:
     --client-cream:#f7eddb;
     --client-charcoal:#1f1a17;
   }
-  .examples{padding:100px 0 120px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .examples .hero-visual{margin-top:0}
   .preview-label{
     display:flex;align-items:center;justify-content:space-between;gap:18px;
     margin-bottom:22px;flex-wrap:wrap;
@@ -860,10 +850,8 @@ PRE-LAUNCH TODO:
     margin-bottom:8px;font-weight:400;font-variation-settings:"opsz" 144;color:var(--navy);
   }
   .price-card .price .currency{font-size:1.4rem;vertical-align:0.7em;margin-right:2px;color:var(--muted);font-weight:300}
-  .price-card .price [data-price]{font-weight:400}
   .price-card .monthly{font-size:0.94rem;color:#3b4757;margin-bottom:30px}
   .price-card .monthly strong{color:var(--navy);font-weight:600}
-  .price-card .monthly .year-one{color:var(--muted);font-size:0.88rem}
   .price-card ul{list-style:none;margin-bottom:30px;flex:1}
   .price-card ul li{
     font-size:0.95rem;padding:11px 0;border-top:1px solid var(--line);
@@ -900,15 +888,6 @@ PRE-LAUNCH TODO:
     50%{box-shadow:0 1px 0 rgba(255,255,255,0.6) inset, 0 50px 90px -30px rgba(26,108,255,0.5), 0 0 0 10px rgba(26,108,255,0.09)}
   }
   .price-card.featured:hover{transform:translateY(-18px) scale(1.025);box-shadow:0 1px 0 rgba(255,255,255,0.6) inset,0 60px 100px -30px rgba(26,108,255,0.5),0 0 0 6px rgba(26,108,255,0.08)}
-  .price-card.featured .price{font-size:4.25rem;line-height:0.92}
-  .price-card.featured .price [data-price]{
-    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
-    font-weight:500;
-  }
-  .price-card.featured .monthly{font-size:1rem}
-  @media(max-width:780px){
-    .price-card.featured .price{font-size:3.6rem}
-  }
   .price-card.featured .badge{
     position:absolute;top:-15px;left:50%;transform:translateX(-50%);
     background:var(--grad);color:white;
@@ -1023,11 +1002,6 @@ PRE-LAUNCH TODO:
   @media(hover: none){
     .about .signers .sig .bio{max-height:120px;opacity:1}
   }
-  .about .founders-stats{
-    margin-top:28px;padding-top:22px;border-top:1px solid var(--line);
-    font-size:0.98rem;color:var(--muted);letter-spacing:0.01em;
-  }
-  .about .founders-stats strong{color:var(--navy);font-weight:600}
 
   /* =================== PROCESS =================== */
   .process{background:var(--paper);position:relative;overflow:hidden}
@@ -1988,114 +1962,24 @@ PRE-LAUNCH TODO:
     </div>
 
     <div class="hero-stats r-up" data-stagger="7" id="heroStats">
-      <div class="hero-stat"><div class="num">From <span class="accent" data-count="299" data-prefix="$">$299</span></div><div class="label">One-time build fee</div></div>
-      <div class="hero-stat"><div class="num"><span class="accent" data-count="7" data-suffix=" days">7 days</span></div><div class="label">From kickoff to launch</div></div>
-      <div class="hero-stat"><div class="num"><span class="accent" data-count="3">3</span> founders</div><div class="label">Miles · Mason · Max</div></div>
+      <div class="hero-stat"><div class="num">From <span class="accent" data-count="299" data-prefix="$">$0</span></div><div class="label">One-time build fee</div></div>
+      <div class="hero-stat"><div class="num"><span class="accent" data-count="7" data-suffix=" days">0 days</span></div><div class="label">From kickoff to launch</div></div>
+      <div class="hero-stat"><div class="num"><span class="accent" data-count="3">0</span> founders</div><div class="label">Miles · Mason · Max</div></div>
       <div class="hero-stat"><div class="num"><span class="accent" data-count="0" data-prefix="$">$0</span> hidden</div><div class="label">Flat monthly. No upsells.</div></div>
     </div>
 
-  </div>
-</section>
-
-<!-- ==================== LIVE PREVIEW GENERATOR ==================== -->
-<section id="generator" class="generator">
-  <div class="container">
-    <div class="generator-head">
-      <span class="eyebrow r-up">Try it now · zero signup</span>
-      <h2 class="display-xl r-up">Type your business name. See <span class="gradient-text">your site</span> in 10 seconds.</h2>
-      <p class="lead r-up">Type your business name, pick an industry, pick a color. The preview updates live. This isn't your real site — but it's how fast we move.</p>
-    </div>
-
-    <div class="gen-grid">
-      <!-- Controls -->
-      <div class="gen-controls r-up">
-        <label class="gen-l">Business name
-          <input id="genName" type="text" value="Mike's Auto" maxlength="40" autocomplete="off" />
-        </label>
-
-        <label class="gen-l">Industry
-          <div class="industry-grid" id="genIndustries">
-            <button type="button" class="ind-btn is-on" data-ind="auto"><span class="ind-emoji">🔧</span>Auto / repair</button>
-            <button type="button" class="ind-btn" data-ind="salon"><span class="ind-emoji">✂️</span>Salon / spa</button>
-            <button type="button" class="ind-btn" data-ind="dental"><span class="ind-emoji">🦷</span>Dental / med</button>
-            <button type="button" class="ind-btn" data-ind="food"><span class="ind-emoji">🍽️</span>Restaurant</button>
-            <button type="button" class="ind-btn" data-ind="trades"><span class="ind-emoji">🛠️</span>Trades / home</button>
-            <button type="button" class="ind-btn" data-ind="fitness"><span class="ind-emoji">🧘</span>Fitness / studio</button>
-          </div>
-        </label>
-
-        <label class="gen-l">Brand color
-          <div class="color-row" id="genColors">
-            <span class="swatch is-on" data-color="#B8342B" style="background:#B8342B" title="Auto red"></span>
-            <span class="swatch" data-color="#1A6CFF" style="background:#1A6CFF" title="Electric blue"></span>
-            <span class="swatch" data-color="#2F855A" style="background:#2F855A" title="Forest green"></span>
-            <span class="swatch" data-color="#0A2540" style="background:#0A2540" title="Deep navy"></span>
-            <span class="swatch" data-color="#B45309" style="background:#B45309" title="Burnt orange"></span>
-            <span class="swatch" data-color="#6B21A8" style="background:#6B21A8" title="Royal purple"></span>
-          </div>
-        </label>
-
-        <a href="#contact" class="gen-cta">Like it? Get the real one <span class="arrow">→</span></a>
-        <button type="button" class="gen-share" id="genShare" aria-label="Copy a link to this preview">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
-          Share this preview
-        </button>
-        <span class="gen-cta-hint">Free preview built for your actual business in ~48hrs.</span>
-      </div>
-
-      <!-- Live preview stage -->
-      <div class="gen-stage r-up">
-        <div class="gen-browser" id="genBrowser">
-          <div class="gen-browser-chrome">
-            <div class="gd"><span></span><span></span><span></span></div>
-            <div class="gurl" id="genUrl">mikesauto.com</div>
-          </div>
-          <div class="gen-browser-body">
-            <div class="gen-bn">
-              <div class="gbrand" id="genBrand">Mike's <em>Auto</em></div>
-              <div class="glinks"><span id="genLink1">Services</span><span id="genLink2">About</span><span id="genLink3">Visit</span></div>
-              <div class="gcta" id="genCtaSm">Book now</div>
-            </div>
-            <div class="gen-hero-row">
-              <div>
-                <div class="gen-headline" id="genHeadline">Honest work. <em>Done right.</em></div>
-                <div class="gen-sub" id="genSub">Family-run garage serving the neighborhood for years. Domestic, foreign, no surprises on the invoice.</div>
-                <div class="gen-buttons">
-                  <span class="gb1" id="genBtn1">Book service</span>
-                  <span class="gb2" id="genBtn2">Call us →</span>
-                </div>
-              </div>
-              <div class="gen-art" id="genArt">
-                <span class="gtag" id="genTag">Open · Mon–Sat</span>
-              </div>
-            </div>
-            <div class="gen-feats">
-              <div class="gen-feat"><strong id="genFeat1A">ASE certified</strong><span id="genFeat1B">12 years running</span></div>
-              <div class="gen-feat"><strong id="genFeat2A">Same-day</strong><span id="genFeat2B">Most repairs</span></div>
-              <div class="gen-feat"><strong id="genFeat3A">Warranty</strong><span id="genFeat3B">On every job</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== EXAMPLE BUILDS ==================== -->
-<section class="examples">
-  <div class="container">
     <div class="hero-visual r-fade" id="heroVisual">
       <div class="preview-label">
         <div class="left">
-          <span class="tag"><span class="dot"></span>Real example builds</span>
-          <span class="caption" id="previewCaption">Here's what real ones look like.</span>
+          <span class="tag"><span class="dot"></span>Example builds</span>
+          <span class="caption" id="previewCaption">Not your real site <strong>— just how fast we work.</strong></span>
         </div>
         <span class="arrow-down">↓</span>
       </div>
 
       <div class="preview-stack" id="previewStack">
         <div class="callout callout-1">
-          <span class="pulse"></span> Live
+          <span class="pulse"></span> Live since Tuesday
         </div>
         <div class="callout callout-2">
           <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -2259,6 +2143,90 @@ PRE-LAUNCH TODO:
   </div>
 </div>
 
+<!-- ==================== LIVE PREVIEW GENERATOR ==================== -->
+<section id="generator" class="generator">
+  <div class="container">
+    <div class="generator-head">
+      <span class="eyebrow r-up">Try it now · zero signup</span>
+      <h2 class="display-xl r-up">See <span class="gradient-text">your site</span> right now.</h2>
+      <p class="lead r-up">Type your business name, pick an industry, pick a color. The preview updates live. This isn't your real site — but it's how fast we move.</p>
+    </div>
+
+    <div class="gen-grid">
+      <!-- Controls -->
+      <div class="gen-controls r-up">
+        <label class="gen-l">Business name
+          <input id="genName" type="text" value="Mike's Auto" maxlength="40" autocomplete="off" />
+        </label>
+
+        <label class="gen-l">Industry
+          <div class="industry-grid" id="genIndustries">
+            <button type="button" class="ind-btn is-on" data-ind="auto"><span class="ind-emoji">🔧</span>Auto / repair</button>
+            <button type="button" class="ind-btn" data-ind="salon"><span class="ind-emoji">✂️</span>Salon / spa</button>
+            <button type="button" class="ind-btn" data-ind="dental"><span class="ind-emoji">🦷</span>Dental / med</button>
+            <button type="button" class="ind-btn" data-ind="food"><span class="ind-emoji">🍽️</span>Restaurant</button>
+            <button type="button" class="ind-btn" data-ind="trades"><span class="ind-emoji">🛠️</span>Trades / home</button>
+            <button type="button" class="ind-btn" data-ind="fitness"><span class="ind-emoji">🧘</span>Fitness / studio</button>
+          </div>
+        </label>
+
+        <label class="gen-l">Brand color
+          <div class="color-row" id="genColors">
+            <span class="swatch is-on" data-color="#B8342B" style="background:#B8342B" title="Auto red"></span>
+            <span class="swatch" data-color="#1A6CFF" style="background:#1A6CFF" title="Electric blue"></span>
+            <span class="swatch" data-color="#2F855A" style="background:#2F855A" title="Forest green"></span>
+            <span class="swatch" data-color="#0A2540" style="background:#0A2540" title="Deep navy"></span>
+            <span class="swatch" data-color="#B45309" style="background:#B45309" title="Burnt orange"></span>
+            <span class="swatch" data-color="#6B21A8" style="background:#6B21A8" title="Royal purple"></span>
+          </div>
+        </label>
+
+        <a href="#contact" class="gen-cta">Like it? Get the real one <span class="arrow">→</span></a>
+        <button type="button" class="gen-share" id="genShare" aria-label="Copy a link to this preview">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+          Share this preview
+        </button>
+        <span class="gen-cta-hint">Free preview built for your actual business in ~48hrs.</span>
+      </div>
+
+      <!-- Live preview stage -->
+      <div class="gen-stage r-up">
+        <div class="gen-browser" id="genBrowser">
+          <div class="gen-browser-chrome">
+            <div class="gd"><span></span><span></span><span></span></div>
+            <div class="gurl" id="genUrl">mikesauto.com</div>
+          </div>
+          <div class="gen-browser-body">
+            <div class="gen-bn">
+              <div class="gbrand" id="genBrand">Mike's <em>Auto</em></div>
+              <div class="glinks"><span id="genLink1">Services</span><span id="genLink2">About</span><span id="genLink3">Visit</span></div>
+              <div class="gcta" id="genCtaSm">Book now</div>
+            </div>
+            <div class="gen-hero-row">
+              <div>
+                <div class="gen-headline" id="genHeadline">Honest work. <em>Done right.</em></div>
+                <div class="gen-sub" id="genSub">Family-run garage serving the neighborhood for years. Domestic, foreign, no surprises on the invoice.</div>
+                <div class="gen-buttons">
+                  <span class="gb1" id="genBtn1">Book service</span>
+                  <span class="gb2" id="genBtn2">Call us →</span>
+                </div>
+              </div>
+              <div class="gen-art" id="genArt">
+                <span class="gtag" id="genTag">Open · Mon–Sat</span>
+              </div>
+            </div>
+            <div class="gen-feats">
+              <div class="gen-feat"><strong id="genFeat1A">ASE certified</strong><span id="genFeat1B">12 years running</span></div>
+              <div class="gen-feat"><strong id="genFeat2A">Same-day</strong><span id="genFeat2B">Most repairs</span></div>
+              <div class="gen-feat"><strong id="genFeat3A">Warranty</strong><span id="genFeat3B">On every job</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== PRICING ==================== -->
 <section id="pricing" class="pricing">
   <div class="orb-px"></div>
@@ -2284,8 +2252,8 @@ PRE-LAUNCH TODO:
       <div class="price-card r-up" data-monthly="49" data-annual="490">
         <div class="tier">Basic</div>
         <div class="promise">Get online</div>
-        <div class="price"><strong data-price>$49/mo</strong></div>
-        <div class="monthly">+ <strong>$299 to start</strong></div>
+        <div class="price"><span class="currency">$</span>299</div>
+        <div class="monthly">+ <span class="price-was">$588</span><strong data-price>$49/mo</strong> · everything included</div>
         <div class="annual-note">~ Save $98/yr on annual ~</div>
         <ul>
           <li>3 pages, custom designed</li>
@@ -2302,8 +2270,8 @@ PRE-LAUNCH TODO:
         <span class="badge">Most Popular</span>
         <div class="tier">Standard</div>
         <div class="promise">Generate leads</div>
-        <div class="price"><strong data-price>$59/mo</strong></div>
-        <div class="monthly">+ <strong>$499 to start</strong></div>
+        <div class="price"><span class="currency">$</span>499</div>
+        <div class="monthly">+ <span class="price-was">$708</span><strong data-price>$59/mo</strong> · everything included</div>
         <div class="annual-note">~ Save $118/yr on annual ~</div>
         <ul>
           <li>5 pages, custom designed</li>
@@ -2320,8 +2288,8 @@ PRE-LAUNCH TODO:
       <div class="price-card r-up" data-monthly="89" data-annual="890">
         <div class="tier">Premium</div>
         <div class="promise">Full presence</div>
-        <div class="price"><strong data-price>$89/mo</strong></div>
-        <div class="monthly">+ <strong>$799 to start</strong></div>
+        <div class="price"><span class="currency">$</span>799</div>
+        <div class="monthly">+ <span class="price-was">$1068</span><strong data-price>$89/mo</strong> · everything included</div>
         <div class="annual-note">~ Save $178/yr on annual ~</div>
         <ul>
           <li>5–7 pages, fully custom</li>
@@ -2345,11 +2313,11 @@ PRE-LAUNCH TODO:
       <div class="roi-controls">
         <div class="roi-slider">
           <label>Avg customer is worth <span class="roi-val" id="roiTicketLabel">$200</span></label>
-          <input type="range" id="roiTicket" min="50" max="500" step="10" value="200" />
+          <input type="range" id="roiTicket" min="50" max="2000" step="25" value="200" />
         </div>
         <div class="roi-slider">
-          <label>You'd be happy with <span class="roi-val" id="roiCustomersLabel">3 new</span> customers/mo</label>
-          <input type="range" id="roiCustomers" min="1" max="10" step="1" value="3" />
+          <label>You'd be happy with <span class="roi-val" id="roiCustomersLabel">3 new</span> /mo</label>
+          <input type="range" id="roiCustomers" min="1" max="30" step="1" value="3" />
         </div>
       </div>
       <div class="roi-result">
@@ -2593,8 +2561,6 @@ PRE-LAUNCH TODO:
           <div class="sig"><div class="avatar">Ma</div><div class="name">Mason</div><div class="role">Finds the work</div><div class="bio">Built the lead-gen tool. Knows which businesses need us before they do.</div></div>
           <div class="sig"><div class="avatar">Mx</div><div class="name">Max</div><div class="role">Talks to clients</div><div class="bio">Picks up the phone, runs the calls, makes sure nothing falls through.</div></div>
         </div>
-        <!-- TODO: replace with real stats before launch -->
-        <p class="founders-stats r-up">Between us: <strong>4 years</strong> of building, <strong>12+ sites</strong> shipped, <strong>zero missed deadlines</strong>.</p>
       </div>
     </div>
   </div>
@@ -2946,7 +2912,7 @@ PRE-LAUNCH TODO:
     gsap.to('#heroVisual', {
       yPercent: -4,
       ease: 'none',
-      scrollTrigger: { trigger: '#heroVisual', start: 'top bottom', end: 'bottom top', scrub: 0.5 }
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.5 }
     });
 
     // ===== GENERIC SCROLL REVEALS =====
@@ -3528,8 +3494,8 @@ PRE-LAUNCH TODO:
       const c = +customers.value;
       const revenue = t * c;
 
-      ticket.style.setProperty('--pct', ((t - 50) / (500 - 50) * 100) + '%');
-      customers.style.setProperty('--pct', ((c - 1) / (10 - 1) * 100) + '%');
+      ticket.style.setProperty('--pct', ((t - 50) / (2000 - 50) * 100) + '%');
+      customers.style.setProperty('--pct', ((c - 1) / (30 - 1) * 100) + '%');
 
       ticketLabel.textContent = fmt(t);
       customersLabel.textContent = c + (c === 1 ? ' new' : ' new');
