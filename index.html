@@ -9,17 +9,17 @@ PRE-LAUNCH TODO:
 -->
 <!--
   ===========================================================================
-  BuiltByM — single-file landing page
+  BuiltByM, single-file landing page
   ===========================================================================
   BEFORE DEPLOYING:
     1. Replace YOUR_ACCESS_KEY_HERE (search the file) with your Web3Forms key
-       — get one free at https://web3forms.com (no email confirm required)
+      , get one free at https://web3forms.com (no email confirm required)
        OR swap form action to your Formspree URL: https://formspree.io/f/yourid
     2. Update phone (202) 999-7885 and hello@builtbym.co if those change
     3. Update the canonical URL in JSON-LD (currently https://builtbym.co)
     4. (Optional) Drop a real OG share image; currently relies on text only.
 
-  HOSTING — any of these work for this single file:
+  HOSTING, any of these work for this single file:
     - GitHub Pages: rename to index.html, push to a repo, enable Pages
     - Netlify Drop: drag file onto netlify.com/drop
     - Vercel: `vercel deploy` in the folder
@@ -30,7 +30,7 @@ PRE-LAUNCH TODO:
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BuiltByM — Modern websites for local businesses</title>
+<title>BuiltByM, Modern websites for local businesses</title>
 <meta name="description" content="From $49/mo plus a one-time build fee. We build, host, and run modern websites for local service businesses. Three founders who answer the phone." />
 
 <!-- favicon (gradient B mark, inlined as SVG) -->
@@ -39,30 +39,30 @@ PRE-LAUNCH TODO:
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="BuiltByM — Modern websites for local businesses" />
+<meta property="og:title" content="BuiltByM, Modern websites for local businesses" />
 <meta property="og:description" content="From $49/mo plus a one-time build fee. We build, host, and run your site for less than agencies charge for a single meeting. Three founders who answer the phone." />
 <meta property="og:site_name" content="BuiltByM" />
 <meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="BuiltByM — Modern websites for local businesses" />
+<meta name="twitter:title" content="BuiltByM, Modern websites for local businesses" />
 <meta name="twitter:description" content="From $49/mo plus a one-time build fee. Three founders who answer the phone." />
 
-<!-- OG share image — once you have a hosting URL, host og.png (1200x630) and uncomment.
+<!-- OG share image, once you have a hosting URL, host og.png (1200x630) and uncomment.
      Most social scrapers (FB, iMessage, Slack) won't render data: URIs.
      <meta property="og:image" content="https://builtbym.co/og.png" />
      <meta name="twitter:image" content="https://builtbym.co/og.png" />
 -->
 
-<!-- Canonical URL — update once you have your real domain -->
+<!-- Canonical URL, update once you have your real domain -->
 <link rel="canonical" href="https://builtbym.co/" />
 
 <!-- Theme color -->
 <meta name="theme-color" content="#1A6CFF" />
 <meta name="color-scheme" content="light" />
 
-<!-- Structured data — helps Google understand the business -->
+<!-- Structured data, helps Google understand the business -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -149,7 +149,7 @@ PRE-LAUNCH TODO:
   strong, b{font-weight:700;letter-spacing:-0.012em;color:var(--navy)}
   .serif strong, .serif b{font-weight:600;letter-spacing:-0.018em}
 
-  /* focus styles — visible only on keyboard nav */
+  /* focus styles, visible only on keyboard nav */
   :focus{outline:none}
   :focus-visible{
     outline:2px solid var(--blue);
@@ -521,7 +521,7 @@ PRE-LAUNCH TODO:
   }
   .hero-stat .label{font-size:0.84rem;color:var(--muted);letter-spacing:0.02em}
 
-  /* hero visual — distinct "client site" color scheme: warm red + cream + charcoal */
+  /* hero visual, distinct "client site" color scheme: warm red + cream + charcoal */
   .hero-visual{
     margin-top:clamp(80px,10vw,120px);
     position:relative;z-index:2;
@@ -620,7 +620,7 @@ PRE-LAUNCH TODO:
   }
   .preview-counter strong{color:var(--navy);font-weight:600}
 
-  /* salon palette — distinct from auto shop */
+  /* salon palette, distinct from auto shop */
   .preview-slide.salon{
     --salon-rose:#c8748a;
     --salon-rose-deep:#8a3d51;
@@ -684,7 +684,7 @@ PRE-LAUNCH TODO:
   }
   @media(max-width:640px){.browser-body{aspect-ratio:4/5}}
 
-  /* mocked client site — completely different palette so it reads as "their site, not ours" */
+  /* mocked client site, completely different palette so it reads as "their site, not ours" */
   .site-nav{
     padding:18px 32px;display:flex;justify-content:space-between;align-items:center;
     background:#1f1a17;color:#f7eddb;
@@ -1260,7 +1260,7 @@ PRE-LAUNCH TODO:
   form input:focus, form textarea:focus{outline:none;border-color:var(--blue);background:white;box-shadow:0 0 0 4px rgba(26,108,255,0.1)}
   form textarea{resize:vertical;min-height:110px;line-height:1.5}
 
-  /* chip selector — multi-select pills for "What do you need?" */
+  /* chip selector, multi-select pills for "What do you need?" */
   .chips{display:flex;flex-wrap:wrap;gap:8px}
   .chip{
     position:relative;cursor:pointer;
@@ -1284,7 +1284,7 @@ PRE-LAUNCH TODO:
     font-variation-settings:"opsz" 144;font-weight:400;
   }
 
-  /* sticky mobile CTA bar — bottom of screen, mobile only */
+  /* sticky mobile CTA bar, bottom of screen, mobile only */
   .mobile-cta{
     display:none;
     position:fixed;left:12px;right:12px;bottom:12px;z-index:90;
@@ -1387,7 +1387,7 @@ PRE-LAUNCH TODO:
   .gen-share svg{color:var(--blue)}
   .gen-cta-hint{display:block;text-align:center;margin-top:12px;font-family:'Fraunces',serif;font-style:italic;font-size:0.82rem;color:#7a8696;font-variation-settings:"opsz" 144}
 
-  /* the live preview pane — sized similarly to hero browser but cleaner */
+  /* the live preview pane, sized similarly to hero browser but cleaner */
   .gen-stage{
     background:var(--navy);border-radius:18px;padding:18px;
     box-shadow:0 50px 100px -30px rgba(10,37,64,0.4);
@@ -1457,14 +1457,14 @@ PRE-LAUNCH TODO:
   .gen-feat{font-size:0.74rem;color:rgba(0,0,0,0.55);display:flex;flex-direction:column;gap:2px}
   .gen-feat strong{color:rgba(0,0,0,0.85);font-weight:500;font-size:0.84rem}
 
-  /* =================== LIVE PREVIEW — PER-INDUSTRY LAYOUT VARIANTS =================== */
+  /* =================== LIVE PREVIEW, PER-INDUSTRY LAYOUT VARIANTS =================== */
   /* Each layout reshapes the same DOM into a meaningfully different design so the
      generator demonstrates range, not just color/text swapping. */
 
   /* Shared: art uses brand color as a CSS var, each layout paints its own pattern */
   .gen-art{background:linear-gradient(135deg, var(--brand-primary, var(--blue)), rgba(0,0,0,0.15))}
 
-  /* Industry icon glyph — sits in the art block, white outline */
+  /* Industry icon glyph, sits in the art block, white outline */
   .gen-art::before{
     content:"";position:absolute;right:14px;top:14px;width:34%;aspect-ratio:1;
     background-position:center;background-repeat:no-repeat;background-size:contain;
@@ -1502,7 +1502,7 @@ PRE-LAUNCH TODO:
       linear-gradient(135deg, var(--brand-primary, var(--blue)) 0%, rgba(0,0,0,0.55) 100%);
   }
 
-  /* ---- SALON: editorial — full-width photo banner on top, centered text below ---- */
+  /* ---- SALON: editorial, full-width photo banner on top, centered text below ---- */
   .gen-browser[data-layout="salon"]{background:#fdf8f3}
   .gen-browser[data-layout="salon"] .gen-hero-row{grid-template-columns:1fr;gap:16px}
   .gen-browser[data-layout="salon"] .gen-art{
@@ -1524,7 +1524,7 @@ PRE-LAUNCH TODO:
     content:"·";color:rgba(0,0,0,0.3);position:absolute;right:-10px;top:0;
   }
 
-  /* ---- DENTAL: clinical — centered, airy mint, small round photo ---- */
+  /* ---- DENTAL: clinical, centered, airy mint, small round photo ---- */
   .gen-browser[data-layout="dental"]{background:#f3f8f6}
   .gen-browser[data-layout="dental"] .gen-hero-row{grid-template-columns:1fr;text-align:center}
   .gen-browser[data-layout="dental"] .gen-art{
@@ -1541,7 +1541,7 @@ PRE-LAUNCH TODO:
     background:rgba(255,255,255,0.7);border:1px solid rgba(0,0,0,0.05);
   }
 
-  /* ---- FOOD: dark moody — reversed grid, dark menu rows with prices ---- */
+  /* ---- FOOD: dark moody, reversed grid, dark menu rows with prices ---- */
   .gen-browser[data-layout="food"]{background:#1a1614;color:#f5ede0}
   .gen-browser[data-layout="food"] .gen-browser-chrome{background:rgba(255,255,255,0.04);border-bottom-color:rgba(255,255,255,0.08)}
   .gen-browser[data-layout="food"] .gen-browser-chrome .gurl{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)}
@@ -1570,7 +1570,7 @@ PRE-LAUNCH TODO:
     color:#f5ede0;font-family:'Fraunces',serif;font-style:normal;font-weight:500;font-size:0.92rem;
   }
 
-  /* ---- TRADES: phone-first — bigger headline, bold cert badges with stripe top ---- */
+  /* ---- TRADES: phone-first, bigger headline, bold cert badges with stripe top ---- */
   .gen-browser[data-layout="trades"]{background:#f8f7f3}
   .gen-browser[data-layout="trades"] .gen-headline{font-size:2.1rem;font-weight:500}
   .gen-browser[data-layout="trades"] .gen-buttons .gb1{padding:11px 18px;font-size:0.85rem;font-weight:600;letter-spacing:0.01em}
@@ -1591,7 +1591,7 @@ PRE-LAUNCH TODO:
   .gen-browser[data-layout="trades"] .gen-feat strong{font-weight:600;font-size:0.82rem;letter-spacing:0.01em;text-transform:uppercase}
   .gen-browser[data-layout="trades"] .gen-feat span{font-size:0.7rem}
 
-  /* ---- FITNESS: schedule grid — features become class cards with day + time ---- */
+  /* ---- FITNESS: schedule grid, features become class cards with day + time ---- */
   .gen-browser[data-layout="fitness"]{background:#f5f4f0}
   .gen-browser[data-layout="fitness"] .gen-art{
     background:
@@ -1634,7 +1634,7 @@ PRE-LAUNCH TODO:
     box-shadow:0 1px 3px rgba(10,37,64,0.12),0 1px 1px rgba(10,37,64,0.04);
     transition:left .3s cubic-bezier(.4,0,.2,1), width .3s cubic-bezier(.4,0,.2,1);
   }
-  /* Mobile viewport — frame the browser as a phone */
+  /* Mobile viewport, frame the browser as a phone */
   .gen-browser[data-view="mobile"]{
     max-width:300px;margin:0 auto;border-radius:28px;
     box-shadow:0 0 0 8px #1a1d22, 0 0 0 9px #2a2e36, 0 30px 60px -20px rgba(10,37,64,0.35);
@@ -2119,7 +2119,7 @@ PRE-LAUNCH TODO:
   .r-up{opacity:0;transform:translateY(28px)}
   .r-fade{opacity:0}
 
-  /* graceful fallback if JS is disabled — show everything */
+  /* graceful fallback if JS is disabled, show everything */
   .no-js .r-up, .no-js .r-fade{opacity:1 !important;transform:none !important}
   .no-js .preview-slide[hidden]{display:none}
   .no-js .gen-stage{opacity:1}
@@ -2207,7 +2207,7 @@ PRE-LAUNCH TODO:
     <div class="generator-head">
       <span class="eyebrow r-up">Try it now · zero signup</span>
       <h2 class="display-xl r-up">Type your business name. See <span class="gradient-text">your site</span> in 10 seconds.</h2>
-      <p class="lead r-up">Type your business name, pick an industry, pick a color. The preview updates live. This isn't your real site — but it's how fast we move.</p>
+      <p class="lead r-up">Type your business name, pick an industry, pick a color. The preview updates live. This isn't your real site, but it's how fast we move.</p>
     </div>
 
     <div class="gen-grid">
@@ -2413,7 +2413,7 @@ PRE-LAUNCH TODO:
           <button class="preview-dot active" data-go="0" aria-label="Show auto shop example"></button>
           <button class="preview-dot" data-go="1" aria-label="Show salon example"></button>
         </div>
-        <div class="preview-counter"><strong id="previewIdx">01</strong> / 02 — <span id="previewName">Auto shop</span></div>
+        <div class="preview-counter"><strong id="previewIdx">01</strong> / 02, <span id="previewName">Auto shop</span></div>
         <div class="preview-arrows">
           <button class="preview-arrow" data-dir="-1" aria-label="Previous example">←</button>
           <button class="preview-arrow" data-dir="1" aria-label="Next example">→</button>
@@ -2428,7 +2428,7 @@ PRE-LAUNCH TODO:
   <div class="container">
     <p class="r-up">
       <span class="proof-line">Built by founders who built their own lead-gen platform.</span>
-      <span class="proof-line proof-line-2">We know which businesses need websites <span class="dash">—</span> because we find them.</span>
+      <span class="proof-line proof-line-2">We know which businesses need websites <span class="dash">-</span> because we find them.</span>
     </p>
     <div class="credit r-up">OUR EDGE</div>
     <p class="service-area r-up">
@@ -2483,7 +2483,7 @@ PRE-LAUNCH TODO:
         <span class="eyebrow r-up">Pricing</span>
         <h2 class="display-xl r-up">Three ways to get <span class="gradient-text">online</span>.</h2>
       </div>
-      <p class="desc r-up">One-time build fee, plus a flat monthly that covers hosting, security, updates — and us picking up the phone when you call.</p>
+      <p class="desc r-up">One-time build fee, plus a flat monthly that covers hosting, security, updates, and us picking up the phone when you call.</p>
     </div>
 
     <div class="billing-toggle-wrap r-up">
@@ -2555,7 +2555,7 @@ PRE-LAUNCH TODO:
     <div class="roi r-up" id="roiCalc">
       <div class="roi-head">
         <h3>Does this <em>actually</em> pay for itself?</h3>
-        <span class="roi-tag">— do the math —</span>
+        <span class="roi-tag">, do the math,</span>
       </div>
       <div class="roi-controls">
         <div class="roi-slider">
@@ -2611,7 +2611,7 @@ PRE-LAUNCH TODO:
         <span class="eyebrow r-up">If any of these sound familiar</span>
         <h2 class="display-xl r-up">Your current site is <span class="gradient-text">probably</span>...</h2>
         <p class="lead r-up">Most local business sites haven't been touched in years. Customers notice. We notice. Here's the short list.</p>
-        <p class="ssub r-up">— and we can fix all of it.</p>
+        <p class="ssub r-up">, and we can fix all of it.</p>
       </div>
       <div class="pain-list">
         <div class="pain-item r-up">
@@ -2632,21 +2632,21 @@ PRE-LAUNCH TODO:
           <span class="pcheck">✕</span>
           <div class="ptext">
             <strong>Showing 2019 hours and a holiday closure from three years ago.</strong>
-            <span>Stale info costs you customers. We give you a one-click update — or just text us and we'll do it.</span>
+            <span>Stale info costs you customers. We give you a one-click update, or just text us and we'll do it.</span>
           </div>
         </div>
         <div class="pain-item r-up">
           <span class="pcheck">✕</span>
           <div class="ptext">
             <strong>Sending leads to an inbox no one checks.</strong>
-            <span>Contact form goes to <em>info@</em>... that lives where? We route to your phone, your email, both — your call.</span>
+            <span>Contact form goes to <em>info@</em>... that lives where? We route to your phone, your email, both, your call.</span>
           </div>
         </div>
         <div class="pain-item r-up">
           <span class="pcheck">✕</span>
           <div class="ptext">
             <strong>Invisible on Google.</strong>
-            <span>No schema, no Google Business linkage, no local SEO. We fix the basics — the stuff that actually moves the needle.</span>
+            <span>No schema, no Google Business linkage, no local SEO. We fix the basics, the stuff that actually moves the needle.</span>
           </div>
         </div>
         <div class="pain-item r-up">
@@ -2781,7 +2781,7 @@ PRE-LAUNCH TODO:
       <div class="why-item r-up">
         <span class="num">02</span>
         <h3>Easier than DIY.</h3>
-        <p>You don't touch a thing. We handle hosting, design, copy, photos, updates, the domain — all of it. You run your business.</p>
+        <p>You don't touch a thing. We handle hosting, design, copy, photos, updates, the domain, all of it. You run your business.</p>
       </div>
       <div class="why-item r-up">
         <span class="num">03</span>
@@ -2802,11 +2802,11 @@ PRE-LAUNCH TODO:
       </div>
       <div class="r-up">
         <p>We're Miles, Mason, and Max. We're 19, in college, and paying our way by running real businesses instead of internships.</p>
-        <p>We built a tool that finds local businesses with bad or missing websites. We build them. No specialists, no hires — just the three of us, every job.</p>
+        <p>We built a tool that finds local businesses with bad or missing websites. We build them. No specialists, no hires, just the three of us, every job.</p>
         <div class="signers">
-          <div class="sig"><div class="avatar">Mi</div><div class="name">Miles</div><div class="role">Builds the sites</div><div class="bio">Writes the code, breaks it, rewrites it. Probably on coffee #3.</div></div>
-          <div class="sig"><div class="avatar">Ma</div><div class="name">Mason</div><div class="role">Finds the work</div><div class="bio">Built the lead-gen tool. Knows which businesses need us before they do.</div></div>
-          <div class="sig"><div class="avatar">Mx</div><div class="name">Max</div><div class="role">Talks to clients</div><div class="bio">Picks up the phone, runs the calls, makes sure nothing falls through.</div></div>
+          <div class="sig"><div class="avatar">Mi</div><div class="name">Miles</div><div class="role">Builds + ships</div><div class="bio">Writes the code, breaks it, rewrites it. Lives in the IDE.</div></div>
+          <div class="sig"><div class="avatar">Ma</div><div class="name">Mason</div><div class="role">Builds + ships</div><div class="bio">Codes alongside us and built the tool that finds the work.</div></div>
+          <div class="sig"><div class="avatar">Mx</div><div class="name">Max</div><div class="role">Builds + ships</div><div class="bio">Codes the front-end, runs the launches, talks to clients.</div></div>
         </div>
         <!-- TODO: replace with real stats before launch -->
         <p class="founders-stats r-up">Between us: <strong>4 years</strong> of building, <strong>12+ sites</strong> shipped, <strong>zero missed deadlines</strong>.</p>
@@ -2849,7 +2849,7 @@ PRE-LAUNCH TODO:
       <div class="promise-card r-up">
         <div class="num">01</div>
         <h3>You see it <em>before</em> you pay.</h3>
-        <p>We build the actual site first — not a slideshow, not a mockup. A real, working preview with your business name and content on it. If it's not better than what you have, walk away. No invoice.</p>
+        <p>We build the actual site first, not a slideshow, not a mockup. A real, working preview with your business name and content on it. If it's not better than what you have, walk away. No invoice.</p>
       </div>
       <div class="promise-card r-up">
         <div class="num">02</div>
@@ -2864,7 +2864,7 @@ PRE-LAUNCH TODO:
     </div>
 
     <p class="promise-foot r-up">Signed, <strong>Miles · Mason · Max</strong></p>
-    <div class="promise-sig r-up">— · —</div>
+    <div class="promise-sig r-up">· · ·</div>
   </div>
 </section>
 
@@ -2880,7 +2880,7 @@ PRE-LAUNCH TODO:
       <div class="faq-list r-up">
         <details class="faq-item">
           <summary>Are you actually 19?<span class="plus"></span></summary>
-          <div class="faq-answer">Yes. Miles, Mason, and Max are all 19. We're putting ourselves through college by running real businesses. We mention it because it's the source of our pricing edge — no office, no payroll, no middle management.</div>
+          <div class="faq-answer">Yes. Miles, Mason, and Max are all 19. We're putting ourselves through college by running real businesses. We mention it because it's the source of our pricing edge, no office, no payroll, no middle management.</div>
         </details>
         <details class="faq-item">
           <summary>What if I don't like the preview?<span class="plus"></span></summary>
@@ -2892,11 +2892,11 @@ PRE-LAUNCH TODO:
         </details>
         <details class="faq-item">
           <summary>What if I already have a website?<span class="plus"></span></summary>
-          <div class="faq-answer">We'll take a look and tell you honestly. Sometimes a refresh is the right move, sometimes a full rebuild. If your current site is already doing the job, we'll say so — we'd rather pass than sell you something you don't need.</div>
+          <div class="faq-answer">We'll take a look and tell you honestly. Sometimes a refresh is the right move, sometimes a full rebuild. If your current site is already doing the job, we'll say so, we'd rather pass than sell you something you don't need.</div>
         </details>
         <details class="faq-item">
           <summary>How does the monthly fee work?<span class="plus"></span></summary>
-          <div class="faq-answer">Flat rate, billed monthly. Covers hosting, SSL, domain renewals, backups, uptime monitoring, ongoing support, and one round of content updates per month (change a phone number, swap a photo, add a service — whatever). Cancel anytime.</div>
+          <div class="faq-answer">Flat rate, billed monthly. Covers hosting, SSL, domain renewals, backups, uptime monitoring, ongoing support, and one round of content updates per month (change a phone number, swap a photo, add a service, whatever). Cancel anytime.</div>
         </details>
         <details class="faq-item">
           <summary>How are you cheaper than agencies?<span class="plus"></span></summary>
@@ -2914,7 +2914,7 @@ PRE-LAUNCH TODO:
       <div>
         <span class="eyebrow r-up">Get in touch</span>
         <h2 class="display-xl r-up" style="color:white">Ready to <span class="gradient-text">get online</span>?</h2>
-        <p class="lead r-up">Tell us a little about your business. We'll send back a free preview of your site — built, not mocked — within a few days.</p>
+        <p class="lead r-up">Tell us a little about your business. We'll send back a free preview of your site, built, not mocked, within a few days.</p>
         <div class="quick-info r-up">
           <div class="qi"><strong>Reply</strong><span>Same day, almost always</span></div>
           <div class="qi"><strong>Preview</strong><span>Real working site, not a slideshow</span></div>
@@ -2948,7 +2948,7 @@ PRE-LAUNCH TODO:
               <label class="chip"><input type="checkbox" name="need" value="Just need a quote" /><span>Just need a quote</span></label>
               <label class="chip"><input type="checkbox" name="need" value="Not sure yet" /><span>Not sure yet</span></label>
             </div>
-            <span class="form-hint">Pick any that apply — or none, it's fine.</span>
+            <span class="form-hint">Pick any that apply, or none, it's fine.</span>
           </label>
           <button type="submit">Get a free preview <span class="arrow">→</span></button>
         </form>
@@ -3006,18 +3006,18 @@ PRE-LAUNCH TODO:
     document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
   }
 
-  // chip toggle behavior — sync visual state with checkbox
+  // chip toggle behavior, sync visual state with checkbox
   document.querySelectorAll('#needChips .chip').forEach(chip => {
     const input = chip.querySelector('input');
     input.addEventListener('change', () => chip.classList.toggle('is-on', input.checked));
   });
 
-  // form handler — real submit to Web3Forms (or Formspree) with honeypot + UX feedback
+  // form handler, real submit to Web3Forms (or Formspree) with honeypot + UX feedback
   const leadForm = document.getElementById('leadForm');
   if (leadForm) {
     leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      // bot trap — silently "succeed" without doing anything
+      // bot trap, silently "succeed" without doing anything
       const honey = leadForm.querySelector('input[name="botcheck"]');
       if (honey && honey.value !== '') return;
 
@@ -3040,14 +3040,14 @@ PRE-LAUNCH TODO:
           });
           if (!res.ok) throw new Error('Network');
         }
-        btn.innerHTML = "Sent — we'll be in touch ✓";
+        btn.innerHTML = "Sent, we'll be in touch ✓";
         btn.style.background = '#16a34a';
         btn.style.boxShadow = '0 14px 30px -10px rgba(22,163,74,0.5)';
         leadForm.reset();
         document.querySelectorAll('#needChips .chip').forEach(c => c.classList.remove('is-on'));
-        if (window.toast) toast("Got it — we'll get back to you today.", 'success');
+        if (window.toast) toast("Got it, we'll get back to you today.", 'success');
       } catch (err) {
-        btn.innerHTML = "Couldn't send — try email instead";
+        btn.innerHTML = "Couldn't send, try email instead";
         btn.style.background = '#b94343';
         setTimeout(() => {
           btn.disabled = false;
@@ -3066,8 +3066,8 @@ PRE-LAUNCH TODO:
   const nameEl = document.getElementById('previewName');
   const captionEl = document.getElementById('previewCaption');
   const slideMeta = [
-    { name: 'Auto shop', caption: "Not your real site <strong>— just how fast we work.</strong>" },
-    { name: 'Hair salon', caption: "Not your real site <strong>— just how fast we work.</strong>" }
+    { name: 'Auto shop', caption: "Not your real site <strong>, just how fast we work.</strong>" },
+    { name: 'Hair salon', caption: "Not your real site <strong>, just how fast we work.</strong>" }
   ];
   let cur = 0;
   const showSlide = (i) => {
@@ -3093,7 +3093,7 @@ PRE-LAUNCH TODO:
   dots.forEach(d => d.addEventListener('click', () => showSlide(parseInt(d.dataset.go, 10))));
   arrows.forEach(a => a.addEventListener('click', () => showSlide(cur + parseInt(a.dataset.dir, 10))));
 
-  // number count-up — runs once when stats scroll into view
+  // number count-up, runs once when stats scroll into view
   const animateCount = (el) => {
     const target = parseInt(el.dataset.count, 10);
     const prefix = el.dataset.prefix || '';
@@ -3207,7 +3207,7 @@ PRE-LAUNCH TODO:
       }
     });
 
-    // ===== WHY NUMBERS — extra dramatic =====
+    // ===== WHY NUMBERS, extra dramatic =====
     gsap.utils.toArray('.why-item').forEach((item, i) => {
       ScrollTrigger.create({
         trigger: item,
@@ -3462,7 +3462,7 @@ PRE-LAUNCH TODO:
       });
     });
 
-    // also email — same right-click-to-copy
+    // also email, same right-click-to-copy
     document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
       link.addEventListener('contextmenu', (e) => {
         e.preventDefault();
@@ -3647,7 +3647,7 @@ PRE-LAUNCH TODO:
         row[1].textContent = cfg.feats[i][1];
       });
 
-      // apply color + layout throughout — CSS variants handle art patterns + per-industry visual style
+      // apply color + layout throughout, CSS variants handle art patterns + per-industry visual style
       const c = state.color;
       const browser = document.getElementById('genBrowser');
       browser.style.setProperty('--brand-primary', c);
@@ -3688,10 +3688,10 @@ PRE-LAUNCH TODO:
         const url = window.location.origin + window.location.pathname + hash;
         try {
           if (navigator.share){
-            await navigator.share({ title: 'Check out this site preview', text: `${state.name} — preview built in 60 seconds`, url });
+            await navigator.share({ title: 'Check out this site preview', text: `${state.name}, preview built in 60 seconds`, url });
           } else if (navigator.clipboard){
             await navigator.clipboard.writeText(url);
-            if (window.toast) toast('Link copied — share it anywhere.', 'success');
+            if (window.toast) toast('Link copied, share it anywhere.', 'success');
           }
         } catch(e){ /* user cancelled */ }
       });
@@ -3796,7 +3796,7 @@ PRE-LAUNCH TODO:
       // payback math: time to recover build cost from net monthly profit
       const netMonthly = revenue - monthlyCost;
       if (netMonthly <= 0){
-        paybackOut.textContent = 'never at that rate — bump the slider';
+        paybackOut.textContent = 'never at that rate, bump the slider';
       } else {
         const months = buildCost / netMonthly;
         let payback;
@@ -3806,7 +3806,7 @@ PRE-LAUNCH TODO:
         else if (months < 1.2) payback = 'about 1 month';
         else if (months < 2.5) payback = Math.round(months) + ' months';
         else if (months < 12) payback = Math.round(months) + ' months';
-        else payback = 'a long time — try more customers';
+        else payback = 'a long time, try more customers';
         paybackOut.textContent = payback;
       }
     }
@@ -3815,7 +3815,7 @@ PRE-LAUNCH TODO:
     update();
   })();
 
-  // =================== SIDE TOC NAV — show after hero, highlight active ===================
+  // =================== SIDE TOC NAV, show after hero, highlight active ===================
   (function(){
     const toc = document.getElementById('sideToc');
     if (!toc) return;
@@ -3853,7 +3853,7 @@ PRE-LAUNCH TODO:
   (function(){
     const el = document.getElementById('lastUpdated');
     if (!el) return;
-    // Build date — bump this when you redeploy
+    // Build date, bump this when you redeploy
     const buildDate = new Date('2026-05-14T00:00:00Z');
     const now = new Date();
     const days = Math.floor((now - buildDate) / 86400000);
@@ -3864,7 +3864,7 @@ PRE-LAUNCH TODO:
     else if (days < 14) label = 'last week';
     else if (days < 35) label = Math.floor(days / 7) + ' weeks ago';
     else if (days < 365) label = Math.floor(days / 30) + ' months ago';
-    else label = 'a while ago — time to refresh';
+    else label = 'a while ago, time to refresh';
     el.textContent = label;
   })();
 
@@ -3892,7 +3892,7 @@ PRE-LAUNCH TODO:
 
   // =================== FIRST-VISIT HINT ===================
   // ~3 seconds after the page loads, drop a subtle toast surfacing ⌘K.
-  // Only fires once per session — sessionStorage-gated, no nagging.
+  // Only fires once per session, sessionStorage-gated, no nagging.
   (function(){
     if (sessionStorage.getItem('seenCmdkHint')) return;
     if (window.matchMedia('(max-width: 980px)').matches) return; // skip on mobile, no cmdk there
@@ -3904,7 +3904,7 @@ PRE-LAUNCH TODO:
     }, 3000);
   })();
 
-  // sticky mobile CTA — hide when the contact form is in view (no need to nag)
+  // sticky mobile CTA, hide when the contact form is in view (no need to nag)
   const mcta = document.getElementById('mobileCta');
   const contactSection = document.getElementById('contact');
   if (mcta && contactSection && 'IntersectionObserver' in window) {
