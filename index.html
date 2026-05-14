@@ -790,6 +790,14 @@
     font-variation-settings:"opsz" 144,"SOFT" 80;
   }
   .proof p .dash{color:var(--blue);font-style:normal;font-weight:500;margin:0 0.2em;display:inline-block}
+  .proof p .proof-line{display:block}
+  .proof p .proof-line-2{margin-top:6px;color:#3b4757}
+  .service-area{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+  .service-area .sa-sep{color:var(--blue);opacity:0.5}
+  @media(max-width:640px){
+    .service-area{flex-direction:column;gap:4px}
+    .service-area .sa-sep{display:none}
+  }
   .proof .credit{
     margin-top:24px;
     font-family:'IBM Plex Mono',monospace;font-size:0.78rem;
@@ -1964,7 +1972,7 @@
       <div class="preview-label">
         <div class="left">
           <span class="tag"><span class="dot"></span>Example builds</span>
-          <span class="caption" id="previewCaption">A site we'd build for a local auto shop <strong>— not our site</strong>.</span>
+          <span class="caption" id="previewCaption">Not your real site <strong>— just how fast we work.</strong></span>
         </div>
         <span class="arrow-down">↓</span>
       </div>
@@ -2088,11 +2096,16 @@
 <section class="proof">
   <div class="container">
     <p class="r-up">
-      Built by founders who built their own lead-gen platform <span class="dash">—</span>
-      we know which businesses need websites because we find them.
+      <span class="proof-line">Built by founders who built their own lead-gen platform.</span>
+      <span class="proof-line proof-line-2">We know which businesses need websites <span class="dash">—</span> because we find them.</span>
     </p>
     <div class="credit r-up">OUR EDGE</div>
-    <p class="service-area r-up"><span class="pin"></span>Based in the <strong>DMV</strong> · working with local businesses anywhere in the US.</p>
+    <p class="service-area r-up">
+      <span class="pin"></span>
+      <span>Based in the <strong>DMV</strong></span>
+      <span class="sa-sep">·</span>
+      <span>Working with local businesses anywhere in the US.</span>
+    </p>
   </div>
 </section>
 
@@ -2804,8 +2817,8 @@
   const nameEl = document.getElementById('previewName');
   const captionEl = document.getElementById('previewCaption');
   const slideMeta = [
-    { name: 'Auto shop', caption: "A site we'd build for a local auto shop <strong>— not our site</strong>." },
-    { name: 'Hair salon', caption: "A site we'd build for a neighborhood salon <strong>— not our site</strong>." }
+    { name: 'Auto shop', caption: "Not your real site <strong>— just how fast we work.</strong>" },
+    { name: 'Hair salon', caption: "Not your real site <strong>— just how fast we work.</strong>" }
   ];
   let cur = 0;
   const showSlide = (i) => {
